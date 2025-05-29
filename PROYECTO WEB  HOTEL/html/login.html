@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Nova - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">                                                                                                                                              
+                <img src="../img/logoempresa.png" alt="Logo Hotel Nova" width="120">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="login.html" class="active">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Login -->
+    <main class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <img src="../img/logoempresa.png" alt="Logo Hotel Nova" width="80">
+                <h2>Iniciar Sesión</h2>
+            </div>
+
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="usuario"><i class="fas fa-user"></i> Usuario</label>
+                    <input type="text" id="usuario" placeholder="Ingrese su usuario" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password"><i class="fas fa-lock"></i> Contraseña</label>
+                    <input type="password" id="password" placeholder="Ingrese su contraseña" required>
+                </div>
+
+                <button type="submit" class="btn-login">Iniciar sesión</button>
+
+                <div class="login-options">
+                    <a href="#" class="forgot-password">¿Has olvidado la contraseña?</a>
+                </div>
+            </form>
+
+            <div class="login-footer">
+                <p>¿No tienes una cuenta? <a href="registro.html" class="register-link">Crear una cuenta</a></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@hotelnova.com</p>
+                <p>Teléfono: +51 926 256 254</p>
+            </div>
+            <div class="footer-section">
+                <h3>Dirección</h3>
+                <p>San Agustín de Cajas 12007</p>
+                <p>Huancayo, Peru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hotel Nova. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

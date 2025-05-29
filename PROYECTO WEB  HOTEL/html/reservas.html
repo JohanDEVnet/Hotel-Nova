@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hotel Nova - Reservas</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/reservas.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/logoempresa.png" alt="Logo Hotel Nova" width="100" height="80" />
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="reservas.html" class="active">Reservas</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="reserva-main">
+    <div class="reserva-card">
+        <div class="reserva-img">
+            <img src="../img/ReservasFOTO1.jpg" alt="Hotel Nova Reserva" />
+        </div>
+        <div class="reserva-form">
+            <div class="reserva-header">
+                <img src="../img/logoempresa.png" alt="Logo Hotel Nova" width="80">
+                <h2>Realizar Reserva</h2>
+                <p class="subtitle">¡Reserva tu estancia en Hotel Nova y disfruta de una experiencia única!</p>
+            </div>
+            <form class="login-form" id="reservaForm">
+                <div class="input-group">
+                    <label for="nombre"><i class="fas fa-user"></i> Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+    <div class="input-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="input-group">
+        <label for="telefono"><i class="fas fa-phone"></i> Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+    </div>
+    <div class="input-group">
+        <label for="fechaEntrada"><i class="fas fa-calendar"></i> Fecha de Entrada</label>
+        <input type="date" id="fechaEntrada" name="fechaEntrada" required>
+    </div>
+    <div class="input-group">
+        <label for="fechaSalida"><i class="fas fa-calendar"></i> Fecha de Salida</label>
+        <input type="date" id="fechaSalida" name="fechaSalida" required>
+    </div>
+    <div class="input-group">
+        <label for="habitacion"><i class="fas fa-bed"></i> Tipo de Habitación</label>
+        <select id="habitacion" name="habitacion" required>
+            <option value="">Seleccionar...</option>
+            <option value="simple">Habitación Simple</option>
+            <option value="doble">Habitación Doble</option>
+            <option value="suite">Suite</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="personas"><i class="fas fa-users"></i> Número de Personas</label>
+        <select id="personas" name="personas" required>
+            <option value="">Seleccionar...</option>
+            <option value="1">1 Persona</option>
+            <option value="2">2 Personas</option>
+            <option value="3">3 Personas</option>
+            <option value="4">4 Personas</option>
+        </select>
+    </div>
+    <div class="input-group">
+        <label for="mensajes"><i class="fas fa-pen"></i> Mensaje Adicional</label>
+        <textarea id="mensajes" name="mensajes" rows="4"></textarea>
+    </div>
+    <button type="submit" class="btn-login"><i class="fas fa-check"></i> Realizar Reserva</button>
+</form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: info@hotelnova.com</p>
+                <p>Teléfono: +51 926 256 254</p>
+            </div>
+            <div class="footer-section">
+                <h3>Dirección</h3>
+                <p>San Agustín de Cajas 12007</p>
+                <p>Huancayo, Peru</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Hotel Nova. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

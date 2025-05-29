@@ -1,0 +1,133 @@
+/*Login/*
+/* Estilos específicos para login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 160px);
+    padding: 2rem;
+    margin-top: 80px; /* Compensa navbar fija */
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), 
+                url('../img/login-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-box {
+    background: var(--white);
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.8s ease-out;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.input-group input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.input-group i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.btn-login:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.login-options {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.forgot-password {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    color: #666;
+}
+
+.register-link {
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 1.5rem;
+    }
+}

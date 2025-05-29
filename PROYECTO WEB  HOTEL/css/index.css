@@ -1,0 +1,755 @@
+/* Sección Hero */
+.hero {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+/* Estilos del Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Elementos del Carrusel */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Imágenes del Carrusel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicator.active {
+    background: white;
+}
+
+/* Contenido superpuesto en el Hero */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--white);
+    z-index: 2;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos del botón general */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Características */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background-color: var(--white);
+}
+
+/* Tarjetas de Características */
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Sección: Descubre nuestro mundo */
+.discover-world {
+    padding: 5rem 2rem;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.discover-world h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Cuadrícula de elementos del mundo */
+.world-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Elementos individuales del mundo */
+.world-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.world-item:hover {
+    transform: translateY(-10px);
+}
+
+.world-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.world-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenido superpuesto en los elementos del mundo */
+.world-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    text-align: left;
+}
+
+.world-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sección: Experiencias Únicas */
+.unique-experiences {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.unique-experiences h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Cuadrícula de experiencias */
+.experiences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de experiencias */
+.experience-card {
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: var(--light-bg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+}
+
+.experience-icon {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.experience-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Sección: Premios y Reconocimientos */
+.awards {
+    padding: 5rem 2rem;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.awards h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+/* Contenedor vertical de premios */
+.awards-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de premios */
+.award-card {
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+}
+
+.award-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.award-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.award-card p {
+    text-align: left;
+    color: #666;
+}
+
+/* Contenedor principal de ubicación y reseñas */
+.location-reviews {
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    width: 100%;
+    margin: 0;
+}
+
+.location-reviews h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    position: relative;
+}
+
+/* Eliminar el grid de dos columnas y hacer que cada sección ocupe todo el ancho */
+.location-reviews > div {
+    display: block;
+    width: 100%;
+    margin: 0;
+}
+
+/* Estilos para la sección de ubicación */
+.location {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.location-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.map-container:hover iframe {
+    filter: grayscale(0%);
+}
+
+.location-info {
+    background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.location-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.location-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: left;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.location-info h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.location-info p {
+    color: #555;
+    margin: 1.2rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.location-info p:hover {
+    color: var(--secondary-color);
+}
+
+.location-info i {
+    color: var(--secondary-color);
+    margin-right: 1rem;
+    font-size: 1.3rem;
+    width: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.location-info p:hover i {
+    transform: scale(1.2);
+}
+
+/* Estilos para la sección de reseñas */
+.reviews {
+    background: var(--white);
+    padding: 2.5rem;
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.reviews h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.review-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+    flex-wrap: nowrap;
+}
+
+.review-card {
+    width: 450px;
+    background: linear-gradient(135deg, var(--white) 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.review-card::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 5rem;
+    color: rgba(52, 152, 219, 0.1);
+    font-family: serif;
+    line-height: 1;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.review-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    border: 3px solid var(--secondary-color);
+    padding: 2px;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover .review-avatar {
+    transform: scale(1.1);
+}
+
+.review-info h4 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.rating {
+    color: #ffc107;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.review-text {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-style: italic;
+    position: relative;
+    padding-left: 1rem;
+    border-left: 2px solid var(--secondary-color);
+}
+
+.review-date {
+    color: #888;
+    font-size: 0.9rem;
+    text-align: right;
+    font-style: italic;
+    position: relative;
+    padding-right: 1rem;
+}
+
+.review-date::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 20px;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .location-reviews {
+        padding: 0;
+    }
+
+    .location, .reviews {
+        margin: 0;
+        padding: 2rem 1rem;
+    }
+
+    .location-content, .review-cards {
+        padding: 0 1rem;
+    }
+
+    .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .location-info {
+        padding: 1.5rem;
+    }
+
+    .location-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .location-info p {
+        font-size: 1.1rem;
+    }
+
+    .world-grid,
+    .experiences-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .world-item img {
+        height: 250px;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .carousel {
+        height: 400px;
+    }
+
+    .review-cards {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .review-card {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/* Sección de Habitaciones */
+.room-types {
+    padding: 5rem 2rem;
+    background-color: var(--light-bg);
+    text-align: center;
+}
+
+.room-types h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-color);
+}
+
+.room-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.room-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-10px);
+}
+
+.room-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.05);
+}
+
+.room-info {
+    padding: 2rem;
+    text-align: left;
+}
+
+.room-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.room-info p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.room-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.room-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #666;
+}
+
+.room-features i {
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+    width: 20px;
+    text-align: center;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive para la sección de habitaciones */
+@media (max-width: 768px) {
+    .room-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card img {
+        height: 200px;
+    }
+
+    .room-info {
+        padding: 1.5rem;
+    }
+}
